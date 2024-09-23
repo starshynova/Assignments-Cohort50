@@ -1,0 +1,30 @@
+*** Unit Test Error Report ***
+
+Debugger attached.
+Debugger attached.
+ PASS  .dist/1-JavaScript/Week2/unit-tests/ex3-tellFortune.test.js
+  js-wk2-ex3-tellFortune
+    ✅ should exist and be executable (3 ms)
+    ✅ should have all TODO comments removed (1 ms)
+    ✅ `tellFortune` should not contain unneeded console.log calls (2 ms)
+    ✅ should take four parameters
+    ✅ should call function `selectRandomly` for each of its arguments (1 ms)
+    ✅ `numKids` should be an array initialized with 5 elements (1 ms)
+    ✅ `locations` should be an array initialized with 5 elements (1 ms)
+    ✅ `partnerNames` should be an array initialized with 5 elements (1 ms)
+    ✅ `jobTitles` should be an array initialized with 5 elements (1 ms)
+    ✅ should tell the fortune by randomly selecting array values (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       10 passed, 10 total
+Snapshots:   0 total
+Time:        3.048 s
+Ran all test suites matching /\/Users\/hackyourfuture\/HYF\/Assignments-Cohort50\/.dist\/1-JavaScript\/Week2\/unit-tests\/ex3-tellFortune.test.js/i.
+Waiting for the debugger to disconnect...
+Waiting for the debugger to disconnect...
+
+*** Spell Checker Report ***
+
+1-JavaScript/Week2/assignment/ex3-tellFortune.js:49:26 - Unknown word (Aleksandr)
+1-JavaScript/Week2/assignment/ex3-tellFortune.js:49:50 - Unknown word (Dimitri)
+1-JavaScript/Week2/assignment/ex3-tellFortune.js:51:64 - Unknown word (Haag)
