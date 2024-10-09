@@ -1,1 +1,22 @@
-/* Write your style here */
+.read {
+  background-color: rgb(113, 247, 151);
+}
+
+.notRead {
+  background-color: rgb(255, 136, 136);
+}
+
+li {
+  list-style-type: none;
+  padding-bottom: 20px;
+  width: 30%;
+  text-align: center;
+  justify-content: center;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+}
