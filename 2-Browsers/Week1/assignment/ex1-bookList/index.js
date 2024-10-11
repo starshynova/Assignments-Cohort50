@@ -29,6 +29,7 @@ function createBookList(books) {
     const imageFileName =
       book.title.replace(/\s+/g, '_').toLowerCase() + '.jpg';
     imageElement.src = imagePath + imageFileName;
+    imageElement.alt = book.title;
 
     liElement.appendChild(paragraphElement);
     liElement.appendChild(imageElement);
