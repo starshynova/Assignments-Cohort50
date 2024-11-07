@@ -1,1 +1,21 @@
-/* add your styling here */
+img {
+  display: none;
+}
+
+button {
+  width: 20%;
+  height: 80px;
+  background-color: blueviolet;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  font-size: 24px;
+}
+
+button:hover {
+  background-color: rgb(183, 134, 229);
+}
+
+.filter {
+  width: 100px;
+}
