@@ -5,7 +5,11 @@ Use the VSCode Debugger to fix the bugs
 --------------------------------------------------------------- --------------*/
 async function getData(url) {
   const response = await fetch(url);
-  return response.json();
+  if (!response.ok) {
+    console.log('Fetched error');
+  } else {
+    return response.json();
+  }
 }
 
 function renderLaureate({ knownName, birth, death }) {
