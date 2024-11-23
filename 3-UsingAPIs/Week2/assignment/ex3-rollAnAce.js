@@ -7,11 +7,11 @@ import { rollDie } from '../../helpers/pokerDiceRoller.js';
  * @returns {Promise<DieFace>}
  */
 export async function rollDieUntil(desiredValue) {
-  let value;
+  let value = false;
   do {
     value = await rollDie();
-  } while (value !== desiredValue);
-  return value;
+  } while (!value);
+  return true;
 }
 
 async function main() {
