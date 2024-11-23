@@ -1,3 +1,7 @@
+const body = document.querySelector('body');
+const image = document.createElement('img');
+const someText = document.createElement('h1');
+
 async function requestData(url) {
   try {
     const data = await fetch(url);
@@ -11,16 +15,12 @@ async function requestData(url) {
 }
 
 function renderImage(data) {
-  const body = document.querySelector('body');
-  const image = document.createElement('img');
   image.src = data.img;
   body.appendChild(image);
   console.log(data);
 }
 
 function renderError(error) {
-  const body = document.querySelector('body');
-  const someText = document.createElement('h1');
   someText.textContent = error.message;
   body.appendChild(someText);
   console.log(error);
