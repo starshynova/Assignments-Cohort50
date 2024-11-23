@@ -21,8 +21,11 @@ export function rollDice() {
 
 async function main() {
   try {
-    if (await rollDice()) {
-      (results) => console.log('Resolved!', results);
+    const result = await rollDice();
+    if ([1, 2, 3, 4].includes(result)) {
+      console.log('Resolved!', result);
+    } else {
+      console.log('Resolved! But result is out of range:', throwResult);
     }
   } catch (error) {
     console.log('Rejected!', error.message);
