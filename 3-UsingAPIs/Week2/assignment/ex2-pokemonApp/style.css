@@ -6,10 +6,6 @@ body {
   gap: 40px;
 }
 
-img {
-  margin: 0 auto;
-}
-
 button {
   width: 300px;
   height: 80px;
@@ -23,6 +19,10 @@ button {
 
 button:hover {
   background-color: rgb(183, 134, 229);
+}
+
+img {
+  margin: 0 auto;
 }
 
 select {

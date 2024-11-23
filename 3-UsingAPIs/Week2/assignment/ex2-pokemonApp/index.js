@@ -6,7 +6,7 @@ async function fetchData(url) {
     }
     return await data.json();
   } catch (error) {
-    console.log('Network error');
+    throw new Error('Network error');
   }
 }
 
@@ -21,12 +21,18 @@ async function fetchAndPopulatePokemons() {
     select.style.display = 'flex';
   });
   const data = await fetchData(url);
-  data.results.forEach((pokemon) => {
-    const option = document.createElement('option');
-    option.value = pokemon.url;
-    option.textContent = pokemon.name;
-    select.appendChild(option);
-  });
+  if (data) {
+    data.results.forEach((pokemon) => {
+      const option = document.createElement('option');
+      option.value = pokemon.url;
+      option.textContent = pokemon.name;
+      select.appendChild(option);
+    });
+  } else {
+    const noDataTxt = document.createElement('p');
+    noDataTxt.textContent = 'no data';
+    document.body.appendChild(noDataTxt);
+  }
 }
 
 async function fetchImage(pokemonUrl, img) {
@@ -45,8 +51,7 @@ async function main() {
   const img = document.createElement('img');
   document.body.appendChild(img);
   select.addEventListener('change', async () => {
-    const selectedUrl = select.value;
-    await fetchImage(selectedUrl, img);
+    await fetchImage(select.value, img);
   });
 }
 
