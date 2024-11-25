@@ -10,11 +10,13 @@ export function rollDie() {
       if (roll > 6) {
         const rolledOff = new Error('Oops... Die rolled off the table.');
         reject(rolledOff);
+        return;
       }
 
       if (roll === randomRollsToDo) {
         const success = `Die settled on ${roll}.`;
         resolve(success);
+        return;
       }
 
       if (roll < randomRollsToDo) {
