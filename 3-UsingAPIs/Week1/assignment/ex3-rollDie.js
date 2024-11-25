@@ -41,3 +41,6 @@ function main() {
 if (process.env.NODE_ENV !== 'test') {
   main();
 }
+
+// The problem no longer occurs because the updated code uses promises
+// instead of callbacks, ensuring clear behavior.
